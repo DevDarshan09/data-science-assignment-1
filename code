@@ -1,0 +1,13 @@
+import pandas as pd
+
+data = pd.read_csv("data.csv")
+
+print("Dataset:")
+print(data)
+
+print("\nAverage Age:", data["Age"].mean())
+print("Average Score:", data["Score"].mean())
+
+top_student = data.loc[data["Score"].idxmax()]
+print("\nTop Student:")
+print(top_student)
